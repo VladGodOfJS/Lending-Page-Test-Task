@@ -1,0 +1,143 @@
+.footer {
+    background-color: #000;
+    position: relative;
+    position: relative;
+  
+    &::before {
+      content: "";
+      width: 100%;
+      height: 0.5px;
+      position: absolute;
+      top: 90%;
+      left: 0;
+      background-color: rgba(255, 255, 255, 0.29);
+  
+      @media(max-width:767px){
+        display: none;
+      }
+    }
+  }
+  
+  .footer-inner {
+    max-width: 1230px;
+    margin-left: auto;
+    padding-left: 16px;
+  
+    @media(max-width:767px){
+      padding-left: 0;
+    }
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 11%;
+  
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+  
+  .footer-item {
+  
+    @media (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    &__text {
+      @include fontParams($ff2, 1rem, #fff);
+      max-width: 300px;
+      margin-top: 18px;
+      letter-spacing: -0.7px;
+      line-height: 25px;
+    }
+  
+    &__adress,
+    &__phone {
+      @include fontParams($ff, $fz, #fff);
+    }
+  
+    &__adress:nth-child(1) {
+      margin-top: 18px;
+      span {
+        font-family: $ff3;
+      }
+    }
+  
+    &__adress:nth-child(2) {
+      margin-top: 5px;
+    }
+  
+    &__phone {
+      margin-top: 42px;
+    }
+  }
+  
+  
+  .footer-item:nth-child(3) {
+    margin-left: 76px;
+  
+    @media (max-width: 767px) {
+      margin-left: 0;
+    }
+  }
+  .footer-menu {
+
+    @media (max-width: 767px) {
+        text-align: center;  
+      }
+
+    .footer-menu__item + .footer-menu__item {
+      margin-top: 25px;
+    }
+  
+    &__item {
+      margin-top: 14px;
+    }
+  
+    &__link {
+      @include fontParams($ff, $fz, #fff);
+      transition: all ease 0.5s;
+  
+      &:hover {
+        color: #ff9900;
+      }
+  
+      @media (max-width: 767px) {
+        font-size: 22px;
+        
+      }
+    }
+  }
+  
+  .footer-media {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column-reverse;
+    height: 120px;
+    margin-top: 16px;
+  
+    @media (max-width: 767px) {
+      align-items: center;
+      justify-content: space-between;
+      height: 150px;
+      margin-top: 10px;
+  
+      img {
+        width: 26px;
+        height: 26px;
+      }
+    }
+  }
+  
+  
+  
+  .footer-bottom {
+    color: rgba(255, 255, 255, 0.29);
+    font-size: 14px;
+    font-family: $ff;
+    margin-top: 8%;
+  }
+  

@@ -1,0 +1,128 @@
+// About
+
+.about {
+    position: relative;
+    overflow-y: hidden;
+  
+    .about-photo {
+      max-width: 543px;
+      height: auto;
+      position: relative;
+      z-index: 2;
+  
+      @media (max-width: 1110px) {
+        max-width: 443px;
+      }
+  
+      @media (max-width: 1010px) {
+        max-width: 100%;
+        height: 60vh;
+  
+        &::before {
+          content: " ";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.31);
+        }
+      }
+  
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: right;
+      }
+  
+      .mark {
+        width: 238px;
+        height: 220px;
+        padding-top: 25px;
+        background-color: #ffb800;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+  
+        @media(max-width:567px){
+          height: 180px;
+          width: 200px;
+          padding-top: 14px;
+        }
+  
+        &__title {
+          @include fontParams($ff4, 70px, #fff);
+          line-height: 1.13;
+          padding-left: 34px;
+        }
+  
+        &__exp {
+          display: block;
+          @include fontParams($ff, 30px, #fff);
+          line-height: 1.39;
+          padding-left: 34px;
+        }
+      }
+    }
+  }
+  
+  .plan-img-wrapp {
+    max-width: 692px;
+    height: auto;
+    position: absolute;
+    bottom: -220px;
+    right: 80px;
+  
+    @media (max-width: 1250px) {
+      right: 0;
+      max-width: 592px;
+    }
+  
+    @media (max-width: 1110px) {
+      max-width: 492px;
+      z-index: -1;
+      right: 120px;
+    }
+  
+    @media (max-width: 576px) {
+      display: none;
+    }
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  .about-content-body {
+    max-width: 542px;
+    margin-left: auto;
+    margin: 11.8% 10% 0 auto ;
+  
+    @media (max-width: 1250px) {
+      margin-right: 0;
+      padding-left: 20px;
+    }
+  
+    @media (max-width: 1010px) {
+      margin-left: 0;
+      margin-top: 40px;
+    }
+  
+    &__title {
+      color: #000;
+      margin-top: 9px;
+    }
+  
+    &__text {
+      @include fontParams($ff, 18px, #7c7c7c);
+      line-height: 25px;
+      margin-top: 27px;
+      letter-spacing: 0.2px;
+    }
+  }

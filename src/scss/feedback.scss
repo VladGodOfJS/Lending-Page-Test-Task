@@ -1,0 +1,78 @@
+.feedback {
+  background-color: #ffb800;
+}
+
+.feedback-inner {
+  max-width: 705px;
+  margin: 0 auto;
+
+  &__title {
+    @include fontParams($ff4, 30px, #fff);
+    font-weight: bold;
+    letter-spacing: 0.7px;
+    padding-top: 48px;
+  }
+
+  &__sub-title {
+    @include fontParams($ff, 18px, #fff);
+    letter-spacing: 0.09px;
+    margin-top: 13px;
+  }
+}
+
+.feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 42px;
+
+  &__input {
+    flex: 0 1 300px;
+    @include fontParams($ff, 16px, #fff);
+    letter-spacing: 1.12px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    margin-top: 43px;
+    background: none;
+    padding-bottom: 3px;
+    padding-left: 3px;
+
+    &::placeholder {
+      color: #fff;
+    }
+  }
+
+  &__textarea {
+    @include fontParams($ff, 16px, #fff);
+    letter-spacing: 1.12px;
+    outline: none;
+    flex: 0 1 100%;
+    margin-top: 43px;
+    padding-bottom: 3px;
+    padding-left: 3px;
+    border: none;
+    border-bottom: 2px solid #fff;
+    background: none;
+
+    &::placeholder {
+      color: #fff;
+    }
+  }
+
+  &__btn {
+    @include fontParams($ff3, 16px, #ffb800);
+    background: #fff;
+    border: none;
+    outline: none;
+    margin-top: 42px;
+    padding: 9px 25px;
+    cursor: pointer;
+    transition: all ease 0.5s;
+
+    &:hover {
+      color: #ff9900;
+      transform: scale(0.9);
+    }
+  }
+}

@@ -1,0 +1,125 @@
+.review {
+    background-image: url("/img/review.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .review-inner {
+    text-align: center;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.1);
+    max-width: 766px;
+    margin: 0 auto;
+    padding-top: 71px;
+    padding-bottom: 83px;
+  
+    &__title--mt {
+      @include fontParams($ff4, 40px, #fff);
+      margin-top: 10px;
+      text-align: center;
+      line-height: 1.39;
+    }
+  
+    &__title {
+      text-align: center;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
+  
+  // Slick slider
+  .review-slider-wrapp {
+    max-width: 580px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .review-slider {
+    margin: 0 auto;
+    padding: 0 10px;
+  
+    &__text {
+      @include fontParams($ff2, 16px, #fff);
+      margin-top: 80px;
+      letter-spacing: 0.16px;
+      line-height: 19px;
+    }
+  
+    &__user {
+      @include fontParams($ff, 20px, #fff);
+      margin-top: 16px;
+      letter-spacing: -0.3px;
+    }
+  }
+  
+  .review-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 210px;
+    margin: 100px auto 0;
+  
+    @media (max-width: 767px) {
+      justify-content: center;
+      margin-top: 30px;
+    }
+  
+    &__dots {
+      align-self: center;
+    }
+  
+    button {
+      font-size: 0;
+      width: 28px;
+      height: 34px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  
+    .slick-prev {
+      background-image: url("/img/left-arrow.svg");
+      background-repeat: no-repeat;
+      background-position: bottom;
+    }
+  
+    .slick-next {
+      background-image: url("/img/next.svg");
+      background-repeat: no-repeat;
+      background-position: bottom;
+    }
+  }
+  .slick-dots {
+    vertical-align: middle;
+  
+    button {
+      border-radius: 50%;
+      vertical-align: middle;
+      padding: 0;
+      border: 3px solid transparent;
+      font-size: 0;
+      width: 6px;
+      height: 6px;
+      background-color: rgba(196, 196, 196, 0.45);
+      outline: none;
+      transition: all 0.5s;
+      cursor: pointer;
+    }
+  }
+  
+  .slick-dots .slick-active button {
+    background-color: #ff9900;
+    width: 9px;
+    height: 9px;
+  }
+  
+  .slick-dots {
+    li {
+      display: inline-block;
+      margin: 0 11px;
+    }
+  }
+  
